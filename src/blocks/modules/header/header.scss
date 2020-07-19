@@ -1,0 +1,524 @@
+header {
+  background: url("../img/top-bg.png") no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  @media(max-width: 1024px) {
+    background-position: 50% 0;
+    background-size: auto 41%;
+  }
+  @media(max-width: 768px) {
+    background: #f3f9ff;
+    padding-bottom: 20px;
+  }
+
+  .top-navbard {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    @media(max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      font-size: 22px;
+      font-weight: 700;
+      color: $dark-text-color;
+
+      img {
+        margin-right: 17px;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      max-width: 645px;
+      @media(max-width: 768px) {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+      @media(max-width: 425px) {
+        align-items: flex-start;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: italic;
+        flex-grow: 1;
+        @media(max-width: 768px) {
+          margin-top: 10px;
+        }
+
+        img {
+          margin-right: 12px;
+        }
+
+        span {
+          color: $light-text-color;
+        }
+      }
+    }
+  }
+
+  .description-container {
+    display: flex;
+    max-width: 1300px;
+    flex-grow: 1;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-right: 38px;
+
+    @media(max-width: 1024px) {
+      flex-direction: column;
+      padding-right: 10px;
+    }
+    @media(max-width: 425px) {
+      padding-top: 0;
+    }
+
+    .goods-container {
+      flex-grow: 1;
+      max-width: 45%;
+      position: relative;
+      @media(max-width: 1024px) {
+        max-width: 55%;
+        width: 55%;
+        align-self: flex-end;
+        min-height: 240px;
+      }
+      @media(max-width: 768px) {
+        max-width: 70%;
+        width: 70%;
+        align-self: center;
+      }
+      @media(max-width: 425px) {
+        max-width: 90%;
+        width: 90%;
+      }
+
+      & > div {
+        position: absolute;
+
+      }
+
+      .orange-goods-item {
+        bottom: -50px;
+        right: -10px;
+
+        img {
+          width: 90%;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -13px;
+          right: 30%;
+          width: 100px;
+          height: 40px;
+          border-radius: 8px;
+          background-color: $orange-color;
+          font-size: 34px;
+          font-weight: 700;
+          color: $white-color;
+        }
+      }
+
+      .green-goods-item {
+        bottom: -105px;
+        right: -63px;
+        @media(max-width: 1024px) {
+          max-width: 80%;
+          right: -10px;
+        }
+
+        img {
+          width: 85%;
+        }
+
+        span {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 40px;
+          border-radius: 8px;
+          background-color: $green-color;
+          color: $white-color;
+          font-size: 34px;
+          font-weight: 700;
+          top: -20px;
+          right: 29%;
+        }
+      }
+    }
+
+    .goods-descript-container {
+      flex-grow: 1;
+      max-width: 55%;
+      display: flex;
+      @media(max-width: 1024px) {
+        max-width: 100%;
+        margin-top: 120px;
+      }
+      @media(max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .descript-block {
+        @media(max-width: 1024px) {
+          max-width: 55%;
+          padding-left: 20px;
+        }
+        @media(max-width: 768px) {
+          max-width: 90%;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 40px;
+          color: $dark-text-color;
+          max-width: 305px;
+          line-height: 1;
+          margin-bottom: 40px;
+          @media(max-width: 1024px) {
+            max-width: 100%;
+          }
+          @media(max-width: 425px) {
+            font-size: 33px;
+          }
+
+          span {
+            font-size: 34px;
+            @media(max-width: 425px) {
+              font-size: 28px;
+            }
+
+            span {
+              position: relative;
+
+              &:first-of-type::before,
+              &:last-of-type::before {
+                content: '';
+                display: block;
+                position: absolute;
+                border-bottom: 5px solid $orange-color;
+                bottom: -2px;
+                width: 128px;
+                height: 0;
+                @media(max-width: 768px) {
+                  display: none;
+                }
+              }
+
+              &:last-of-type::before {
+                right: 0;
+                border-color: $green-color;
+                width: 138px;
+              }
+            }
+          }
+        }
+
+        & > div {
+          background: url("../img/left-vertical-arrow.png") no-repeat;
+          background-position: 25px center;
+          background-size: auto 50%;
+          @media(max-width: 768px) {
+            max-width: 85%;
+          }
+        }
+
+        & > div > div:first-of-type,
+        & > div > div:nth-of-type(2),
+        & > div > div:last-of-type {
+          display: flex;
+          align-items: center;
+          margin-bottom: 40px;
+
+          div {
+            width: 60px;
+            height: 60px;
+            background: $light-green-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 18px;
+
+            span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: $green-color;
+              width: 46px;
+              height: 46px;
+              border-radius: 50%;
+              color: $white-color;
+              font-size: 20px;
+              font-weight: 700;
+            }
+          }
+
+          p {
+            max-width: 290px;
+            @media(max-width: 768px) {
+              max-width: none;
+            }
+
+            .bold {
+              font-weight: bold;
+            }
+
+            .orange-line,
+            .green-line {
+              position: relative;
+
+              &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                border-top: 3px solid $orange-color;
+                bottom: 0;
+              }
+            }
+
+            .green-line::before {
+              border-color: $green-color;
+            }
+          }
+        }
+      }
+
+      .form-block {
+        border: 4px solid $green-color;
+        background: $white-color;
+        max-width: 265px;
+        flex-grow: 1;
+        border-radius: 10px;
+        margin-left: 10px;
+        position: relative;
+        box-sizing: border-box;
+        @media(max-width: 425px) {
+          align-self: baseline;
+          margin: 0 auto;
+        }
+
+        .form-block-container {
+          padding: 10px;
+        }
+
+        .top-form-banner {
+          position: absolute;
+          border: 4px solid $green-color;
+          border-top: none;
+          border-radius: 0 0 10px 10px;
+          width: 150px;
+          padding: 0 5px 8px 5px;
+          left: calc(50% - 78px);
+          top: -4px;
+          background-color: #f3f9ff;
+
+          img {
+            margin-left: 8px;
+          }
+
+          span {
+            color: $gray-color;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          color: $black-color;
+          text-align: center;
+          margin-top: 30px;
+          padding: 0 25px;
+
+          span {
+            color: $orange-color;
+            font-weight: 500;
+          }
+        }
+
+        .price-container {
+          display: flex;
+          justify-content: space-around;
+          padding-top: 18px;
+
+          .price-item {
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .price {
+              width: 106px;
+              height: 40px;
+              border-radius: 5px;
+              font-size: 34px;
+              font-weight: 300;
+              margin-top: 7px;
+            }
+
+            &:first-of-type {
+              color: $light-text-color;
+
+              span:last-of-type {
+                color: $black-color;
+                position: relative;
+
+                &::after,
+                &::before {
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  width: 90px;
+                  border-top: 1px solid $old-price-line-color;
+                  top: 50%;
+                  left: 5px;
+                }
+
+                &::after {
+                  transform: rotate(18deg);
+                }
+
+                &::before {
+                  transform: rotate(-18deg);
+                }
+              }
+            }
+
+            &:last-of-type {
+              .price {
+                background-image: linear-gradient(to right, #ffbc02 0%, #ffce02 100%);
+                font-weight: 500;
+              }
+            }
+          }
+        }
+
+        .order-form {
+          max-width: 100%;
+          padding: 5px 0;
+
+          label {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            min-height: 65px;
+            background: $gray-background-color;
+            box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0.04);
+            border-radius: 32px;
+            padding: 0 21px;
+
+            input {
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              max-width: 83%;
+              padding-left: 15px;
+              border: none;
+              background: $gray-background-color;
+            }
+
+            &:last-of-type {
+              max-height: 70px;
+              background: $green-color;
+              background-image: linear-gradient(to right, #ffbc02 0%, #ffce02 100%);
+              padding: 5px;
+              align-items: stretch;
+              margin-top: 15px;
+
+              button {
+                width: 100%;
+                padding: 10px;
+                min-height: 100%;
+                border-radius: 27px;
+                border: 2px solid rgba(255, 255, 255, .5);
+                background: $green-color;
+                background-image: linear-gradient(to right, #ffbc02 0%, #ffce02 100%);
+
+                span:first-of-type {
+                  font-weight: 700;
+                  font-size: 28px;
+                  line-height: 22px;
+                }
+
+                span:last-of-type {
+                  font-weight: 700;
+                  font-size: 16px;
+                  line-height: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .count-block {
+          padding: 15px;
+          font-size: 18px;
+          color: $light-text-color;
+          text-align: center;
+
+          span {
+            color: $green-color;
+            font-weight: 500;
+          }
+        }
+
+        .form-footer {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          padding: 11px 15px 13px 28px;
+          color: $light-text-color;
+          background: $gray-background-color;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+
+          img {
+            margin-right: 12px;
+          }
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 49px;
+          height: 233px;
+          background: url("../img/verticalFormArrow.png");
+          top: 170px;
+          right: -42px;
+          @media(max-width: 425px) {
+            right: -35px;
+            transform: scaleX(.8);
+          }
+        }
+      }
+    }
+  }
+}
